@@ -49,10 +49,9 @@
 			var m = today.getMinutes();
 			m = checkTime(m);
 			document.getElementById('dateTime').innerHTML = h + ":" + m;
-			//var t = setTimeout(start, 30000);
 		}
 		function checkTime(i) {
-			if(i < 10) {i = "0" + i}; // add zero in front of numbers < 10
+			if(i < 10) {i = "0" + i}; // dodaje nulu ispred brojeva manjih od < 10
 			return i;
 		}
 	</script>
@@ -162,7 +161,7 @@
 		}
 		echo "<img src='temp_icon.jpg' style='width:50px;height:50px;margin-left:85px;margin-top:15px;'/>";
 		echo number_format((float)$temperature/$i,1, '.', '')."°C";
-		//echo "<br>";
+		
 		echo "<img src='hum_icon.png' style='width:50px;height:50px;margin-left:85px;margin-top:15px;'/>";
 		echo number_format((float)$humidity/$i,2, '.', '')."%";
 		$_SESSION["counter"]++;
